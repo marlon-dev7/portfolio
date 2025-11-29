@@ -1,8 +1,28 @@
-new kursor({
-  type: 1,
-  removeDefaultCursor: true,
-  color: '#000000'
-});
+// new kursor({
+//   type: 1,
+//   removeDefaultCursor: true,
+//   color: '#000000'
+// });
+
+// Menu responsive toggle
+const containerIcons = document.getElementById("container__icons");
+const menuIcon = document.getElementById("menu__icon");
+const closeIcon = document.getElementById("close__icon");
+const navList = document.getElementById("nav__list");
+
+const mostrar_ocultar_nav = () => {
+  const menuIsOpen = navList.classList.toggle("nav__list--show");
+  menuIcon.classList.toggle("icon--hide");
+  closeIcon.classList.toggle("icon--show");
+
+  if (menuIsOpen) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+}
+
+containerIcons.addEventListener("click", mostrar_ocultar_nav);
 
 // Obtiene la URL actual
 // const currentLocation = window.location.pathname.split("/").pop();
@@ -14,44 +34,42 @@ new kursor({
 //   }
 // });
 
+// document.addEventListener("DOMContentLoaded", function() {
+//   let activeItemIndicator = CSSRulePlugin.getRule(".menu-item p#active::after");
+//   const toggleButton = document.querySelector(".burger");
+//   let isOpen = false;
 
+//   gsap.set(".menu-item p", { y: 225 });
 
+//   const timeline = gsap.timeline({ paused: true });
 
-document.addEventListener("DOMContentLoaded", function() {
-  let activeItemIndicator = CSSRulePlugin.getRule(".menu-item p#active::after");
-  const toggleButton = document.querySelector(".burger");
-  let isOpen = false;
+//   timeline.to(".overlay", {
+//     duration: 1.5,
+//     clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+//     ease: "power4.inOut"
+//   });
 
-  gsap.set(".menu-item p", { y: 225 });
+//   timeline.to(".menu-item p", {
+//     duration: 1.5,
+//     y: 0,
+//     stagger: 0.2,
+//     ease: "power4.out"
+//   }, "-=1");
 
-  const timeline = gsap.timeline({ paused: true });
+//   timeline.to(activeItemIndicator, {
+//     with: "100%",
+//     duration: 1,
+//     ease: "power4.out",
+//     delay: 0.5
+//   }, "<");
 
-  timeline.to(".overlay", {
-    duration: 1.5,
-    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-    ease: "power4.inOut"
-  });
+//   toggleButton.addEventListener("click", function() {
+//     if (isOpen) {
+//       timeline.reverse();
+//     } else {
+//       timeline.play();
+//     }
+//     isOpen = !isOpen;
+//   })
+// });
 
-  timeline.to(".menu-item p", {
-    duration: 1.5,
-    y: 0,
-    stagger: 0.2,
-    ease: "power4.out"
-  }, "-=1");
-
-  timeline.to(activeItemIndicator, {
-    with: "100%",
-    duration: 1,
-    ease: "power4.out",
-    delay: 0.5
-  }, "<");
-
-  toggleButton.addEventListener("click", function() {
-    if (isOpen) {
-      timeline.reverse();
-    } else {
-      timeline.play();
-    }
-    isOpen = !isOpen;
-  })
-});

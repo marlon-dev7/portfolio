@@ -107,13 +107,13 @@ body {
 }
 
 .div2 nav ul li a:hover {
-  color: var(--tertiary-color);
+  color: #797979;
 }
 
-nav a.active {
+/* nav a.active {
   color: var(--tertiary-color);
   font-weight: bold;
-}
+} */
 
 /* Fin Menú */
 
