@@ -83,9 +83,15 @@
     font-size: 1.3rem;
   }
 
+  .subtitle-container {
+    top: 355px;
+  }
   .subtitle {
     font-size: 3.7rem;
-    top: 355px;
+    -webkit-text-stroke: 2px black;
+  }
+  .subtitle-2{
+    -webkit-text-stroke: unset;
   }
 
   h2 {
@@ -130,10 +136,12 @@
   .parent {
     height: 680px;
   }
-
+  
+  .subtitle-container {
+    top: 390px;
+  }
   .subtitle {
     font-size: 4.7rem;
-    top: 390px;
   }
 
   h2 {
@@ -189,9 +197,11 @@
   .div2 nav ul li a {
     font-size: 1.05rem;
   }
+  .subtitle-container {
+    top: 455px;
+  }
   .subtitle {
     font-size: 5rem;
-    top: 455px;
   }
   h2 {
     font-size: 5rem;
