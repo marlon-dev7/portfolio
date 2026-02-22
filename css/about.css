@@ -32,7 +32,7 @@
   background-image: url(../img/papel-cinta-vertical.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: 106% 100%;
   position: absolute;
   bottom: 0px;
   height: 500px;
