@@ -14,12 +14,26 @@
 .h2 {
   margin-top: 60px;
 }
+/* .mi-video {
+  position: absolute;
+  width: 70px;
+  z-index: 1;
+} */
+.mi-gif {
+  position: absolute;
+  width: 70px;
+  z-index: 1;
+  left: 50%;
+  top: 22%;
+  transform: translate(-50%, 0%);
+}
 
 .container {
   position: relative;
   display: flex;
   flex-direction: column;
   height: 100vh;
+  margin-top: 50px;
   /* gap: 30px; */
 }
 
