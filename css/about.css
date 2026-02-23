@@ -19,7 +19,7 @@
   width: 70px;
   z-index: 2;
   left: 50%;
-  top: 19%;
+  top: 11rem;
   transform: translate(-50%, 0%);
 }
 
@@ -27,7 +27,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 60rem;
   margin-top: 50px;
   /* gap: 30px; */
 }
@@ -35,6 +35,10 @@
 .container img {
   width: 100%;
   transform: translateX(-6vw);
+}
+
+.column1{
+  height: 100%;
 }
 
 .column2{
@@ -66,11 +70,11 @@ footer{
 @media (min-width: 768px) {
   .mi-gif {
     width: 6rem;
-    top: 22%;
+    top: 13rem;
   }
   .container img {
     width: auto;
-    height: 100vh;
+    height: 100%;
   }
   .column2{
     background-image: url(../img/papel-cinta-horizontal-t.png);
@@ -100,6 +104,7 @@ footer{
   }
   .column1 {
     flex: 1;
+    height: auto;
   }
    .column2{
     position: relative;
@@ -115,6 +120,9 @@ footer{
 }
 
 @media (min-width: 1280px) {
+  .mi-gif {
+    top: 14rem;
+  }
   .column2{
     align-items: center;
     background-size: 90% 70%;
@@ -127,7 +135,10 @@ footer{
 }
 
 @media (min-width: 1536px) {
-  .container {
-    margin-top: 90px;
+  .h2{
+    margin-top: 60px;
+  }
+  .mi-gif{
+    width: 7rem;
   }
 }
