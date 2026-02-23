@@ -59,7 +59,7 @@
 
 @media (min-width: 1024px) {
   .parent {
-    height: 600px;
+    height: calc(100vh - 40px);
   }
 
   .container__icons {
@@ -134,7 +134,7 @@
 
 @media (min-width: 1280px) {
   .parent {
-    height: 680px;
+    /* height: 680px; */
   }
   
   .subtitle-container {
@@ -192,13 +192,14 @@
     font-size: 16px;
   }
   .parent {
-    height: calc(100vh - 40px);
+    /* height: calc(100vh - 40px); */
   }
   .div2 nav ul li a {
     font-size: 1.05rem;
   }
   .subtitle-container {
-    top: 455px;
+    /* width: 90%; */
+    top: 25vw;
   }
   .subtitle {
     font-size: 5rem;
