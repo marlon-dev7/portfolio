@@ -59,7 +59,7 @@
 
 @media (min-width: 1024px) {
   .parent {
-    height: calc(100vh - 40px);
+    height: 600px;
   }
 
   .container__icons {
@@ -135,6 +135,7 @@
 @media (min-width: 1280px) {
   .parent {
     /* height: 680px; */
+    height: calc(100vh - 40px);
   }
   
   .subtitle-container {
