@@ -320,7 +320,9 @@ h2 {
   top: 20px;
   color: #fff;
   font-weight: 600;
-  /* user-select: none; */
+  user-select: none;
+  touch-action: none;
+  cursor: grab;
   border-radius: 8px;
 }
 #draggable.dragging { cursor: grabbing; }
