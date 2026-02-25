@@ -60,6 +60,7 @@
 @media (min-width: 1024px) {
   .parent {
     height: 600px;
+    background-size: 100% 100%;
   }
 
   .container__icons {
@@ -72,6 +73,7 @@
     height: auto;
     flex-direction: row;
     background-color: transparent;
+    backdrop-filter: none;
     gap: 40px;
   }
 
@@ -88,7 +90,7 @@
   }
   .subtitle {
     font-size: 3.7rem;
-    -webkit-text-stroke: 2px black;
+    -webkit-text-stroke: 2px white;
   }
   .subtitle-2{
     -webkit-text-stroke: unset;

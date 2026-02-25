@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css"/>
-    <link rel="stylesheet" href="css/responsive.css"/>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
     <!-- <link rel="stylesheet" href="css/about.css" /> -->
     <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css" />
     <link rel="icon" type="favicon/x-icon" href="img/favicon.png" />
@@ -12,25 +12,53 @@
   </head>
 
   <body>
+    <glass-element
+      id="draggable"
+      style="z-index: 10; --glass-padding: 32px"
+      width="200"
+      height="200"
+      radius="20"
+      depth="10"
+      blur="1"
+      strength="100"
+      background-color="rgba(255,255,255,0.4)"
+      chromatic-aberration="2"
+    >
+      <!-- Content -->
+      <div>Arrástrame</div>
+    </glass-element>
+
     <div class="parent">
-      <!-- <video autoplay muted loop class="background-video">
-                <source src="video/bg-header.mp4" type="video/mp4">
-                Tu navegador no soporta la reproducción de videos.
-      </video> -->
       <div class="div1">
         <img class="logo" src="img/favicon.png" alt="logo-marlon" />
       </div>
       <div class="div2">
         <nav class="nav">
           <div class="container__icons" id="container__icons">
-            <img src="img/icon-menu.svg" class="icons menu__icon" id="menu__icon">
-            <img src="img/icon-close.svg" class="icons close__icon" id="close__icon">
+            <img
+              src="img/icon-menu.svg"
+              class="icons menu__icon"
+              id="menu__icon"
+            />
+            <img
+              src="img/icon-close.svg"
+              class="icons close__icon"
+              id="close__icon"
+            />
           </div>
 
           <ul class="nav__list" id="nav__list">
-            <li class="nav__item"><a href="pages/projects.html" class="nav__link">Proyectos</a></li>
-            <li class="nav__item"><a href="pages/about.html" class="nav__link">Acerca de</a></li>
-            <li class="nav__item"><a href="#contact" id="section-contact-btn" class="nav__link">Contacto</a></li>
+            <li class="nav__item">
+              <a href="pages/projects.html" class="nav__link">Proyectos</a>
+            </li>
+            <li class="nav__item">
+              <a href="pages/about.html" class="nav__link">Acerca de</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" id="section-contact-btn" class="nav__link"
+                >Contacto</a
+              >
+            </li>
           </ul>
         </nav>
       </div>
@@ -251,5 +279,8 @@
     <!-- Kursor -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.js"></script> -->
     <script src="js/index.js"></script>
+    <script src="js/displacement-utils.js"></script>
+    <script src="js/glass-element.js"></script>
+    <script src="js/draggable.js"></script>
   </body>
 </html>

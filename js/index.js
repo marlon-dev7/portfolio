@@ -24,6 +24,17 @@ const mostrar_ocultar_nav = () => {
 
 containerIcons.addEventListener("click", mostrar_ocultar_nav);
 
+// Close menu when clicking a nav link (mobile) - optional simple auto-close
+navList.addEventListener('click', function(e){
+  const a = e.target.closest('a');
+  if(!a) return;
+  // close menu after clicking a link
+  navList.classList.remove('nav__list--show');
+  menuIcon.classList.remove('icon--hide');
+  closeIcon.classList.remove('icon--show');
+  document.body.classList.remove('no-scroll');
+});
+
 // Obtiene la URL actual
 // const currentLocation = window.location.pathname.split("/").pop();
 // const menuItems = document.querySelectorAll("nav a");
