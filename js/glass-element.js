@@ -355,7 +355,7 @@ class GlassElement extends HTMLElement {
                 .glass-box {
                     background: rgba(255, 255, 255, 0.4);
                     box-shadow: 1px 1px 1px 0px rgba(255,255,255, 0.60) inset, -1px -1px 1px 0px rgba(255,255,255, 0.60) inset, 0px 0px 16px 0px rgba(0,0,0, 0.04);
-                    cursor: grab;
+                    // cursor: grab;
                     transition: transform 0.1s ease;
                     position: relative;
                     ${this.autoSize ? `display: inline-block; width: fit-content; min-width: ${this.minWidth}px; min-height: ${this.minHeight}px;` : ''}

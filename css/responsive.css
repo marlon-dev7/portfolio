@@ -92,7 +92,7 @@
     font-size: 3.7rem;
     -webkit-text-stroke: 2px white;
   }
-  .subtitle-2{
+  .subtitle-2 {
     -webkit-text-stroke: unset;
   }
 
@@ -125,6 +125,12 @@
     height: 100%;
   }
 
+  .scroll-to-top {
+    bottom: 40px;
+    right: 20px;
+    /* font-size: 20px; */
+  }
+
   footer {
     height: 430px;
   }
@@ -139,7 +145,7 @@
     /* height: 680px; */
     height: calc(100vh - 40px);
   }
-  
+
   .subtitle-container {
     top: 390px;
   }
