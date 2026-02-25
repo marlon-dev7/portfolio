@@ -14,7 +14,7 @@ document.getElementById("section-contact-btn").addEventListener("click", () => {
     });
 });
 
-
+// Scramble text effect on nav links
 const links = document.querySelectorAll("nav a");
 
     links.forEach(link => {
@@ -46,23 +46,3 @@ const links = document.querySelectorAll("nav a");
         });
       });
     });
-
-// const sT = gsap.utils.toArray('.scramble');
-// sT.forEach(item => {
-//     let tween = gsap.to(item, {
-//         duration: 1,
-//         scrambleText: {
-//             text: ".scrambled-text",
-//             chars: "<&!§8("
-//         },
-//         paused: true
-//     });
-
-//     item.addEventListener('mouseenter', () => {
-//         tween.play();
-//     });
-
-//     item.addEventListener("mouseleave", () => {
-//         tween.reverse();
-//     });
-// });

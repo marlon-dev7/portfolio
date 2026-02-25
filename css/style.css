@@ -314,7 +314,7 @@ h2 {
 }
 
 /* Draggable element */
-#draggable {
+/* #draggable {
   position: fixed;
   left: 20px;
   top: 20px;
@@ -325,7 +325,7 @@ h2 {
   cursor: grab;
   border-radius: 8px;
 }
-#draggable.dragging { cursor: grabbing; }
+#draggable.dragging { cursor: grabbing; } */
 
 /* .wrapper::after {
   background: radial-gradient(100% 100% at 50% 0, transparent 0, #ffffff 100%);
