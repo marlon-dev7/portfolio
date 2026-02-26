@@ -211,6 +211,19 @@ body.no-scroll {
   grid-area: 2 / 4 / 3 / 5;
   border-bottom: 1px solid var(--border-color);
 }
+glass-element{
+  display: flex;
+  flex-direction: row;
+}
+.content-glass{
+  display: flex;
+    color: #000000;
+    /* text-align: center; */
+    font-family: sans-serif;
+    padding: var(--glass-padding, 16px 24px);
+    flex-direction: column;
+    pointer-events: none;
+}
 
 .div7 {
   grid-area: 3 / 1 / 4 / 2;
@@ -289,8 +302,8 @@ body.no-scroll {
 /* Fin header */
 
 .content {
-  /* width: 90%; */
-  margin: 0 20px;
+  width: 90%;
+  margin: 0 auto;
 }
 
 h2 {
@@ -396,9 +409,9 @@ h2 {
 .grid-right .col-text,
 .grid-left .col-text {
   display: flex;
-  height: auto;
+  /* height: auto; */
   padding: 30px 20px;
-  background: #ddd;
+  /* background: #ddd; */
   border-radius: 20px;
   flex-direction: column;
   justify-content: center;
@@ -408,33 +421,41 @@ h2 {
 .grid-right .col-img,
 .grid-left .col-img {
   grid-row: 1;
-  height: 190px;
-  margin-bottom: 20px;
+  height: 16rem;
+  /* margin-bottom: 20px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   background-size: cover;
   background-position: center;
   border-radius: 20px;
 }
 
 h3 {
-  font-size: 1.4rem;
-  font-weight: 100;
-  margin-bottom: 15px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  /* margin-bottom: 15px; */
 }
 
 .img-development {
-  background-image: url("../img/1.png");
+  background-color: #b5bec2;
+  /* background-image: url("../img/1.png"); */
 }
 
 .img-web-design {
-  background-image: url("../img/2.png");
+  background-color: #b5bec2;
+  /* background-image: url("../img/2.png"); */
 }
 
 .img-wordpress {
-  background-image: url("../img/3.png");
+  background-color: #b5bec2;
+  /* background-image: url("../img/3.png"); */
 }
 
 .img-design {
-  background-image: url("../img/4.png");
+  background-color: #b5bec2;
+  /* background-image: url("../img/4.png"); */
 }
 
 /* Fin Services */

@@ -365,7 +365,7 @@ class GlassElement extends HTMLElement {
                     transform: scale(0.98);
                 }
 
-                .content {
+                .content-glass {
                     ${this.autoSize ? '' : 'width: 100%; height: 100%;'}
                     display: flex;
                     align-items: center;
@@ -377,7 +377,7 @@ class GlassElement extends HTMLElement {
                 }
             </style>
             <div class="glass-box">
-                <div class="content">
+                <div class="content-glass">
                     <slot></slot>
                 </div>
             </div>

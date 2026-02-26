@@ -103,7 +103,7 @@
   .grid-left,
   .grid-right {
     gap: 20px;
-    padding: 0;
+    padding-bottom: 2rem;
   }
 
   .grid-left {
@@ -122,7 +122,7 @@
   .grid-right .col-img,
   .grid-left .col-img {
     grid-row: none;
-    height: 100%;
+    height: 20rem;
   }
 
   .scroll-to-top {
@@ -183,7 +183,12 @@
   .grid-right .col-text,
   .grid-left .col-text {
     padding: 0px 40px;
-    height: 247px;
+    /* height: 247px; */
+  }
+  .grid-right .col-img,
+  .grid-left .col-img {
+    grid-row: none;
+    height: 22rem;
   }
 
   footer {
@@ -250,7 +255,10 @@
   .grid-right .col-text,
   .grid-left .col-text {
     padding: 0px 60px;
-    height: 369px;
+  }
+  .grid-right .col-img,
+  .grid-left .col-img {
+    height: 28rem;
   }
 
   h3 {
