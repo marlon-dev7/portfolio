@@ -44,7 +44,7 @@
 }
 
 body {
-  background-color: #ffffff;
+  background-color: #f5f5f7;
 }
 
 body.no-scroll {
@@ -427,35 +427,37 @@ h2 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
+  background-repeat: no-repeat;
   border-radius: 20px;
 }
 
 h3 {
   font-size: 1.5rem;
-  font-weight: 500;
-  /* margin-bottom: 15px; */
+  font-weight: 600;
+  width: fit-content;
+  background: linear-gradient(90deg,#37112C 0%, #E16727 50%, #FFCAAA 100%);
+  -webkit-background-clip: text; /* Recorta el fondo al texto */
+  -webkit-text-fill-color: transparent; /* Hace el texto transparente para ver el fondo */
+  background-clip: text; /* Propiedad estándar para mayor compatibilidad */
+  margin-bottom: 15px;
 }
 
 .img-development {
-  background-color: #b5bec2;
-  /* background-image: url("../img/1.png"); */
+  background-image: url("../img/bg-design.png");
 }
 
 .img-web-design {
-  background-color: #b5bec2;
-  /* background-image: url("../img/2.png"); */
+  /* background-color: #b5bec2; */
 }
 
 .img-wordpress {
-  background-color: #b5bec2;
-  /* background-image: url("../img/3.png"); */
+  background-image: url("../img/bg-wordpress.png");
 }
 
 .img-design {
-  background-color: #b5bec2;
-  /* background-image: url("../img/4.png"); */
+  background-image: url("../img/bg-illustration.png");
 }
 
 /* Fin Services */

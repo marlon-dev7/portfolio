@@ -79,7 +79,8 @@ class GlassElement extends HTMLElement {
             'base-height',
             'auto-size',
             'min-width',
-            'min-height'
+            'min-height',
+            'disable-click-animation'
         ];
     }
 
@@ -204,36 +205,43 @@ class GlassElement extends HTMLElement {
         return parseInt(this.getAttribute('min-height')) || 0;
     }
 
+    get disableClickAnimation() {
+        return this.hasAttribute('disable-click-animation');
+    }
+
     // Calcular la profundidad dinámica basada en el estado de click
     get depth() {
-        return this.baseDepth / (this.clicked ? 0.7 : 1);
+        return this.baseDepth / (this.clicked && !this.disableClickAnimation ? 0.7 : 1);
     }
 
     setupEventListeners() {
         const glassBox = this.shadowRoot.querySelector('.glass-box');
         
-        glassBox.addEventListener('mousedown', () => {
-            this.clicked = true;
-            this.updateStyles();
-        });
+        // Solo agregar listeners si no está deshabilitada la animación
+        if (!this.disableClickAnimation) {
+            glassBox.addEventListener('mousedown', () => {
+                this.clicked = true;
+                this.updateStyles();
+            });
 
-        glassBox.addEventListener('mouseup', () => {
-            this.clicked = false;
-            this.updateStyles();
-        });
-
-        glassBox.addEventListener('mouseleave', () => {
-            this.clicked = false;
-            this.updateStyles();
-        });
-
-        // Prevenir que el evento mouseup se pierda
-        document.addEventListener('mouseup', () => {
-            if (this.clicked) {
+            glassBox.addEventListener('mouseup', () => {
                 this.clicked = false;
                 this.updateStyles();
-            }
-        });
+            });
+
+            glassBox.addEventListener('mouseleave', () => {
+                this.clicked = false;
+                this.updateStyles();
+            });
+
+            // Prevenir que el evento mouseup se pierda
+            document.addEventListener('mouseup', () => {
+                if (this.clicked) {
+                    this.clicked = false;
+                    this.updateStyles();
+                }
+            });
+        }
     }
 
     updateStyles() {
@@ -362,7 +370,7 @@ class GlassElement extends HTMLElement {
                 }
                 
                 .glass-box:active {
-                    transform: scale(0.98);
+                    transform: ${this.disableClickAnimation ? 'none' : 'scale(0.98)'};
                 }
 
                 .content-glass {
