@@ -61,7 +61,7 @@ body.no-scroll {
   grid-row-gap: 0px;
   height: 500px;
   /* background-color: var(--secondary-color); */
-  background-image: url(../img/bg-header.webp);
+  background-image: url(../img/header.webp);
   background-repeat: no-repeat;
   background-position: left;
   background-size: cover;
@@ -227,14 +227,14 @@ glass-element{
 
 .div7 {
   grid-area: 3 / 1 / 4 / 2;
-  /* border-bottom: 1px solid var(--border-color); */
+  border-bottom: 1px solid var(--border-color);
 }
 
 /* Subtitle */
 .div8 {
   grid-area: 3 / 2 / 4 / 3;
   border-left: 1px solid var(--border-color);
-  /* border-bottom: 1px solid var(--border-color); */
+  border-bottom: 1px solid var(--border-color);
   border-right: 1px solid var(--border-color);
 }
 
@@ -265,13 +265,13 @@ glass-element{
 
 .div9 {
   grid-area: 3 / 3 / 4 / 4;
-  /* border-bottom: 1px solid var(--border-color); */
+  border-bottom: 1px solid var(--border-color);
   border-right: 1px solid var(--border-color);
 }
 
 .div10 {
   grid-area: 3 / 4 / 4 / 5;
-  /* border-bottom: 1px solid var(--border-color); */
+  border-bottom: 1px solid var(--border-color);
 }
 
 .div11 {
@@ -513,7 +513,7 @@ h3 {
 
 /* Inicio Contacto */
 .bg-footer {
-  background-image: url("../img/bg-footer.jpg");
+  background-image: url("../img/footer.webp");
   background-color: #000;
   background-position: bottom;
   background-repeat: no-repeat;

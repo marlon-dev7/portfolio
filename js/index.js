@@ -51,3 +51,15 @@ if(scrollToTopBtn) {
   });
 }
 
+// activar enlace de menú según la página actual (funciona en todas las páginas HTML)
+(function markActiveNavLink() {
+  const path = window.location.pathname.split('/').pop() || 'index.html';
+  const links = document.querySelectorAll('.nav__link');
+  links.forEach(link => {
+    const href = link.getAttribute('href').split('/').pop();
+    if(href === path) {
+      link.classList.add('active');
+    }
+  });
+})();
+

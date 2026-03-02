@@ -88,6 +88,13 @@
     font-size: 1.05rem;
   }
 
+  /* destacar el elemento de menú activo en escritorio */
+  .nav__link.active {
+    color: var(--main-color);
+    font-weight: bold;
+  }
+
+
   #title1 {
     font-size: 1.3rem;
   }
