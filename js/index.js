@@ -91,7 +91,10 @@ if (scrollToTopBtn) {
 
       // reproducir/pausar independiente por contenedor
       container.addEventListener('pointerenter', playVideo);
-      container.addEventListener('pointerleave', stopVideo);
+      container.addEventListener('pointerleave', (ev) => {
+        if (ev.pointerType === 'touch') return; // no pausar cuando se arrastra el dedo para scroll
+        stopVideo();
+      });
 
       // accesibilidad: play/pause con focus/blur
       container.addEventListener('focus', playVideo, true);
