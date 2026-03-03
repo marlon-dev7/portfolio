@@ -4,6 +4,10 @@
   width: 100%;
   border-radius: 20px;
   margin-bottom: 10px;
+  filter: brightness(0.5);
+}
+.cont-project:hover {
+  filter: brightness(1);
 }
 
 /* Tabs component (mobile‑first) */

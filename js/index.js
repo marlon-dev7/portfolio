@@ -63,12 +63,15 @@ if (scrollToTopBtn) {
   });
 })();
 
-// reproducir/pausar video al hacer hover sobre la sección .projectw-1
+// reproducir/pausar video al hacer hover sobre la sección
 (function initHoverVideo() {
   try {
     // Buscar cualquier contenedor de proyecto que tenga un <video>
     const containers = Array.from(document.querySelectorAll('.cont-project'));
     if (!containers.length) return;
+
+    // determinar si estamos en un dispositivo táctil/sin hover
+    const isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0 || window.matchMedia('(hover: none)').matches;
 
     containers.forEach(container => {
       const video = container.querySelector('video');
@@ -95,12 +98,17 @@ if (scrollToTopBtn) {
       container.addEventListener('blur', stopVideo, true);
 
       // para móviles: tocar alterna reproducción (toggle)
-      container.addEventListener('touchstart', (e) => {
-        try {
-          if (video.paused) video.play();
-          else { video.pause(); }
-        } catch (err) {}
-      }, { passive: true });
+      // container.addEventListener('touchstart', (e) => {
+      //   try {
+      //     if (video.paused) video.play();
+      //     else { video.pause(); }
+      //   } catch (err) {}
+      // }, { passive: true });
+
+      // si es dispositivo táctil, activar autoplay inmediato
+      if (isTouch) {
+        video.play().catch(() => {});
+      }
     });
   } catch (err) {
     console.warn('initHoverVideo:', err);
