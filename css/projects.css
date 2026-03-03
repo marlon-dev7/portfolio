@@ -1,7 +1,117 @@
 .cont-project {
-    background-color: #ccc;
-    height: 270px;
-    width: 100%;
-    border-radius: 20px;
-    margin-bottom: 10px;
+  background-color: #ccc;
+  height: 270px;
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+/* Tabs component (mobile‑first) */
+.tabs {
+  margin: 12px 0 20px;
+}
+
+.tabs-controls {
+  display: flex;
+  flex-direction: column; /* botones apilados en móvil */
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 12px 14px;
+  border-radius: 12px;
+  text-align: left;
+  font-family: DMMono-medium, Poppins, sans-serif;
+  font-size: 1rem;
+  color: #111;
+}
+
+.tab-btn.active,
+.tab-btn[aria-selected="true"] {
+  background: var(--main-color);
+  color: #fff;
+  border-color: transparent;
+}
+
+.tabs-panels {
+  margin-top: 12px;
+}
+
+.tab-panel {
+  /* background: #fff; */
+  border-radius: 12px;
+  /* padding: 12px; */
+  /* box-shadow: 0 1px 6px rgba(0,0,0,0.06); */
+}
+
+.tab-panel[hidden] {
+  display: none;
+}
+
+.graphic-design-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.design-item {
+  cursor: pointer;
+}
+
+.video-psicologia {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* En pantallas más anchas los botones se colocan en fila */
+@media (min-width: 768px) {
+  .cont-project {
+    height: 240px;
+  }
+  .tabs-controls {
+    flex-direction: row;
+  }
+  .tab-btn {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+  .tabs-panels {
+    margin-top: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cont-project {
+    height: 220px;
+  }
+  .tab-btn {
+    padding: 14px 18px;
+    font-size: 1.05rem;
+  }
+}
+
+@media (min-width: 1178px) {
+  .cont-project {
+    height: 250px;
+  }
+  .graphic-design-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1536px) {
+  .cont-project {
+    height: 300px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .cont-project {
+    height: 370px;
+  }
 }
