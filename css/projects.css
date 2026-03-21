@@ -1,13 +1,14 @@
+.design-item {
+  cursor: pointer;
+}
+
 .cont-project {
   background-color: #ccc;
-  height: 270px;
+  height: 77%;
   width: 100%;
   border-radius: 20px;
   margin-bottom: 10px;
-  filter: brightness(0.5);
-}
-.cont-project:hover {
-  filter: brightness(1);
+  transition: all 0.3s ease;
 }
 
 /* Tabs component (mobile‑first) */
@@ -31,6 +32,7 @@
   font-family: DMMono-medium, Poppins, sans-serif;
   font-size: 1rem;
   color: #111;
+  cursor: pointer;
 }
 
 .tab-btn.active,
@@ -61,22 +63,51 @@
   gap: 20px;
 }
 
-.design-item {
-  cursor: pointer;
+/* al pasar sobre cont-project, la imagen .right-arrow crece ligeramente */
+.right-arrow {
+  display: inline-block;
+  transform: scale(1);
+  transition: transform 0.2s ease;
+  transform-origin: center center;
+  /* transition: all 0.3s ease; */
 }
 
-.video-psicologia {
+.cont-project:hover .right-arrow,
+.cont-project:focus-within .right-arrow {
+  transform: scale(1.1);
+}
+.design-item a {
+  text-decoration: none;
+  color: inherit;
+}
+.design-item a:visited {
+  color: black;
+}
+
+.video-psicologia,
+.img-project {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 20px;
 }
 
+.description-project {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.description-project img {
+  /* width: 2rem; */
+  height: 3rem;
+}
+
+footer {
+  margin-top: 70px;
+}
+
 /* En pantallas más anchas los botones se colocan en fila */
 @media (min-width: 768px) {
-  .cont-project {
-    height: 240px;
-  }
   .tabs-controls {
     flex-direction: row;
   }
@@ -91,7 +122,10 @@
 
 @media (min-width: 1024px) {
   .cont-project {
-    height: 220px;
+    filter: brightness(0.5);
+  }
+  .cont-project:hover {
+    filter: brightness(1);
   }
   .tab-btn {
     padding: 14px 18px;
@@ -100,22 +134,13 @@
 }
 
 @media (min-width: 1178px) {
-  .cont-project {
-    height: 250px;
-  }
   .graphic-design-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (min-width: 1536px) {
-  .cont-project {
-    height: 300px;
-  }
-}
-
 @media (min-width: 1920px) {
   .cont-project {
-    height: 370px;
+    height: 83%;
   }
 }
